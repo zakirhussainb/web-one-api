@@ -5,7 +5,7 @@ Description : This contains the Extraction Logic/Rules to be used for
 """
 import logging
 import utils as eutil
-import urllib.request
+from urllib.request import Request, urlopen
 from datetime import datetime
 from bs4 import BeautifulSoup
 
@@ -29,10 +29,14 @@ Description : This will extract the required information from the given
 
 
 def get_extracted_content(page_url):
-    with urllib.request.urlopen(page_url) as response:
-        html = response.read()
-        response = extract(page_url, html)
-        return response
+    reqObj = Request(url=page_url, headers={
+        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 '
+                      'Safari/537.11 '
+    })
+    response = urlopen(reqObj)
+    html = response.read()
+    response = extract(page_url, html)
+    return response
 
 
 def extract(url, inpBinObj, outFormat='json'):

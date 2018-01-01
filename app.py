@@ -12,6 +12,7 @@ def is_alive():
 @app.route("/extract")
 def extract():
     page_url = request.args.get("pageURL")
+    print(page_url)
     response = ext.get_extracted_content(page_url)
     return jsonify(response)
 
