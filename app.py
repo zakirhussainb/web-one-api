@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import extractor as ext
 
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route("/")
@@ -12,7 +14,6 @@ def is_alive():
 @app.route("/extract")
 def extract():
     page_url = request.args.get("pageURL")
-    print(page_url)
     response = ext.get_extracted_content(page_url)
     return jsonify(response)
 
