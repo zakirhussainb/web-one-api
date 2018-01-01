@@ -1,0 +1,162 @@
+#Social Link Keywords
+social_links:
+- linkedin
+- facebook
+- twitter
+- youtube
+- instagram
+- pinterest
+- plus_google
+- angel
+
+company_info:
+- about
+- about-us
+- welcome
+- our-story
+- story
+- stories
+- helpcentre
+- help
+- contact
+- contact us
+- shipping
+- handling
+- ordering
+- delivery
+- order
+- track
+- policy
+- policies
+- privacy
+- security
+- question
+- questions
+- cancellation
+- returns
+- return
+- exchange
+- cancel
+- press
+- blog
+- terms
+- conditions
+- faq
+- join
+- join-us
+- team
+- teams
+- careers
+- career
+- payments
+- pricing
+- payment
+- price
+
+
+company_info_links:
+- /about
+- /about-us
+- /welcome
+- /our-story
+- /story
+- /stories
+- /helpcentre
+- /help
+- /contact
+- /contact us
+- /shipping
+- /handling
+- /ordering
+- /delivery
+- /order
+- /track
+- /policy
+- /policies
+- /privacy
+- /security
+- /question
+- /questions
+- /cancellation
+- /returns
+- /return
+- /exchange
+- /cancel
+- /press
+- /blog
+- /terms
+- /conditions
+- /faq
+- /join
+- /join-us
+- /team
+- /teams
+- /careers
+- /career
+- /payments
+- /pricing
+- /payment
+
+about_page_map:
+- about
+- about-us
+- welcome
+- our story
+- stories
+- story
+
+contact_page_map:
+- contact
+- contact-us
+- helpcentre
+- help
+
+shipping_page_map:
+- shipping
+- handling
+- delivery- order
+- track
+- ordering
+
+policy_page_map:
+- privacy
+- policy
+- policies
+- question
+- questions
+- security
+
+return_exchange_map:
+- exchange
+- return
+- cancellation
+- cancel
+- returns
+
+press_blog_map:
+- press
+- blog
+
+terms_conditions_map:
+- terms
+- conditions
+- terms-conditions
+
+payments_pricing_map:
+- payments
+- pricing
+- payment
+
+faq_map:
+- faq
+
+carrers_blog_map:
+- careers
+- career
+- join-us
+- join
+- team
+- teams
+
+#Same Domain Link Match Threshold
+inlink_threshold: 90

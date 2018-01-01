@@ -33,7 +33,6 @@ def extract(url, inpBinObj, outFormat='json'):
     soup = BeautifulSoup(inpBinObj, "html.parser")
     header = {}
     body = {}
-    next_url = []
 
     # Populate the Header portion with relevant information
     header['url'] = url
@@ -80,9 +79,7 @@ def extract(url, inpBinObj, outFormat='json'):
         header['status_msg'] = 'Could not generate the soup . Raw HTML might be empty'
         logger.error('raw html is either missing or empty')
 
-    webdata = {}
-    webdata['header'] = header
-    webdata['body'] = body
+    webdata = {'header': header, 'body': body}
 
     logger.info('extraction completed')
 
