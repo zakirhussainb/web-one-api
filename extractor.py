@@ -5,6 +5,7 @@ Description : This contains the Extraction Logic/Rules to be used for
 """
 import logging
 import utils as eutil
+import urllib.request
 from datetime import datetime
 from bs4 import BeautifulSoup
 
@@ -25,6 +26,13 @@ Description : This will extract the required information from the given
               format - Format to be used to store the extracted data in the file
 @:returns   : Dict - containing the Extracted Data
 '''
+
+
+def get_extracted_content(page_url):
+    with urllib.request.urlopen(page_url) as response:
+        html = response.read()
+        response = extract(page_url, html)
+        return response
 
 
 def extract(url, inpBinObj, outFormat='json'):
@@ -79,7 +87,9 @@ def extract(url, inpBinObj, outFormat='json'):
         header['status_msg'] = 'Could not generate the soup . Raw HTML might be empty'
         logger.error('raw html is either missing or empty')
 
-    webdata = {'header': header, 'body': body}
+    webdata = {}
+    webdata['header'] = header
+    webdata['body'] = body
 
     logger.info('extraction completed')
 
