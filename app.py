@@ -7,7 +7,7 @@ CORS(app)
 
 
 @app.route("/")
-def is_alive():
+def index():
     return "WebOne API Services is Ready"
 
 
